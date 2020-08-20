@@ -25,5 +25,25 @@
 
 ## 2.3 서블릿 활용
 
-* 
+### 2.3.1 HTTP 요청과 응답
+
+#### 2.3.1.1 GET 요청 처리
+
+* 서블릿에서 doGet메서드를 이용하여 GET 메서드 방식의 요청을 응답받을 수 있다.
+* 받는 파라미터: HttpServletRequest, HttpServletResponse
+
+#### 2.3.1.2 POST 요청 처리
+
+* doPost 메서드를 활용한다. -> URL직접접근시 405에러 발생
+
+#### 2.3.1.3 HTML 폼 데이터 전송
+
+* HTML의 form에서 action과 method 속성을 이용한다.
+
+### 2.3.2 멀티파트
+
+* 멀티파트(multipart)는 바이너리 데이터 전송을 위해 사용
+* ex.파일전송시, html의 form 에서 enctype="multipart/form-data"
+* 서버코드에서 멀티파트 데이터 처리를 위해 MultiPartConfig 어노테이션 사용
+* @fileSizeThreshold, @location, @maxFileSize, @maxRequestSize
 
